@@ -3,7 +3,7 @@
 A premium, brutalist-tech portfolio website built for high performance, immersive storytelling, and flawless user experience. Designed to resemble a classified terminal interface, it features physics-based interactions, smooth scroll reveals, and a carefully crafted dark mode aesthetic.
 
 ## 🚀 Live Demo
-*(Add your live deployment link here once deployed, e.g., https://priyanshuraj.vercel.app)*
+*(https://pr-portfolio-eta.vercel.app/)*
 
 ## 🛠 Tech Stack
 - **Framework:** Next.js 15 (App Router)
