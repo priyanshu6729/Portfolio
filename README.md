@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Transmission from the Void — Portfolio
 
-## Getting Started
+A premium, brutalist-tech portfolio website built for high performance, immersive storytelling, and flawless user experience. Designed to resemble a classified terminal interface, it features physics-based interactions, smooth scroll reveals, and a carefully crafted dark mode aesthetic.
 
-First, run the development server:
+## 🚀 Live Demo
+*(Add your live deployment link here once deployed, e.g., https://priyanshuraj.vercel.app)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠 Tech Stack
+- **Framework:** Next.js 15 (App Router)
+- **Library:** React 19
+- **Styling:** Tailwind CSS v4 + Custom Vanilla CSS (Variables, Animations)
+- **Language:** Pure JavaScript (ES6+)
+- **Hosting/Deployment:** Vercel (Recommended)
+
+## ✨ Key Features
+- **Immersive Brutalist-Tech Aesthetic:** "Mission Log" and "Omega Clearance" theme with scanline effects, custom cursors, and glowing hover states.
+- **Physics-Based Skills Graph:** A custom-built, collision-detected SVG node graph for the "Technical Arsenal" section. Features smooth repulsion physics and dynamic label scaling.
+- **Performant Animations:** Centralized `useInView` hook utilizing `IntersectionObserver` to trigger hardware-accelerated scroll reveals without heavy scroll-event listeners.
+- **Zero-Dependency Interactions:** Interactive elements like the initial booting loader, modal overlays, and sticky navigation are built without heavy third-party animation libraries to keep the bundle size minimal.
+- **Accessibility Ready:** Includes `aria-hidden` on decorative elements, semantic HTML5 tags, keyboard navigation support (e.g., Escape key to close modals), and respects `prefers-reduced-motion` for users sensitive to animations.
+
+## 📂 Project Structure
+```text
+transmission/
+├── src/
+│   ├── app/                # Next.js App Router (layout, page, globals.css)
+│   ├── components/         
+│   │   ├── canvas/         # Interactive background (Starfield)
+│   │   ├── layout/         # Nav and Footer components
+│   │   ├── sections/       # Main page sections (Hero, About, Skills, Projects, etc.)
+│   ├── content/            # Data layer (JSON-like objects for skills, projects, meta)
+│   └── hooks/              # Reusable React hooks (useInView)
+├── public/                 # Static assets (images, icons)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Local Development
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository** (if applicable) or download the source code.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000) to see the application running.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗 Build for Production
 
-## Learn More
+To create an optimized production build:
+```bash
+npm run build
+```
+To test the production build locally:
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Design System Constraints
+- **Typography:** Uses `JetBrains Mono` for technical text and `Outfit` or `Inter` (configurable in layout) for display.
+- **Spacing:** Enforced via custom CSS variables (`--space-sm`, `--space-md`, etc.) in `globals.css` to maintain rigorous visual rhythm.
+- **Colors:** Deep void backgrounds (`#05050a`), bright primary text (`#f8f8f8`), and distinct accent colors (e.g., saber blue `#4fc3f7`) mapped to CSS variables.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 License
+This project is proprietary.
