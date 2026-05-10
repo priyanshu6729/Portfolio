@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import { projects } from '@/content/projects/index';
 import { useInView } from '@/hooks/useInView';
 
-const FILTERS = ['ALL', 'PERSONAL', 'RESEARCH'];
-const TYPE_COLORS = { personal: '#4fc3f7', research: '#a78bfa', 'open-source': '#f5c518', hackathon: '#e63946' };
+const FILTERS = ['ALL', 'PERSONAL', 'GROUP', 'RESEARCH'];
+const TYPE_COLORS = { personal: '#4fc3f7', group: '#2dd4bf', research: '#a78bfa', 'open-source': '#f5c518', hackathon: '#e63946' };
 
 function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -75,7 +75,7 @@ export default function Projects() {
   const [selected, setSelected] = useState(null);
 
   const featured = projects.find(p => p.featured);
-  const filtered = projects.filter(p => !p.featured && (filter === 'ALL' || p.type.toUpperCase() === filter));
+  const filtered = projects.filter(p => p !== featured && (filter === 'ALL' || p.type.toUpperCase() === filter));
 
   return (
     <section id="projects" ref={sectionRef} style={{ background: 'var(--color-deep)' }}>
